@@ -1,0 +1,31 @@
+﻿@page "/contact"
+@using BlazorApp.Shared.Models
+@inject HttpClient Http
+
+<h1>Reach Out To Us!</h1>
+
+<EditForm Model="@contactFormModel" OnValidSubmit="@HandleValidSubmit">
+    <InputText id="name" placeholder="Name" @bind-Value=@contactFormModel.Name />
+    <button type="submit">Send</button>
+</EditForm>
+
+@code {
+    private ContactFormModel contactFormModel = new ContactFormModel();
+
+    private async Task HandleValidSubmit()
+    {
+        // Send the form data to the Azure Function
+        var response = await Http.PostAsJsonAsync("/api/SendEmailFunction", contactFormModel);
+
+        if (response.IsSuccessStatusCode)
+        {
+            // Handle success, e.g., show a success message
+            Console.WriteLine("Email sent successfully.");
+        }
+        else
+        {
+            // Handle failure, e.g., show an error message
+            Console.WriteLine("Failed to send email.");
+        }
+    }
+}
