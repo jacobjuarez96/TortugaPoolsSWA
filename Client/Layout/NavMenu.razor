@@ -1,47 +1,11 @@
-﻿@* <div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Static Web Apps</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="contact">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Contact
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
- *@
-
- @inject IJSRuntime JSRuntime
+﻿ @inject IJSRuntime JSRuntime
 
  <div class="navbar">
     <div class="top-left">
         <div class="svg-logo-container">
             <div class="svg-a-container">
                 <NavLink class="top-nav-menu-logo" href="" Match="NavLinkMatch.All">
-                    <img class="svg-class" src="svgs/logosvg/Logo.svg" alt="Logo" />
+                    <img class="svg-class" src="/SVGs/LogoSvg/Logo.svg" alt="Logo" />
                 </NavLink>
             </div>
             
@@ -60,7 +24,7 @@
                 </div>
                 <br />
                 <div id="phone-svg">
-                    <img src="svgs/logosvg/Phone-svg.svg" />
+                    <img src="/SVGs/LogoSvg/Phone-svg.svg" />
                 </div>
                 <div id="phone-number">
                     504.473.4384
