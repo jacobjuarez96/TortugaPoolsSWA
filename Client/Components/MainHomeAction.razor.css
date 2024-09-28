@@ -28,7 +28,7 @@
 }
 
 
-.main-home-action-prompt {
+.main-home-action-prompt h1{ 
     color: #fbf7ef;
     font-weight: 700;
     pointer-events: none;

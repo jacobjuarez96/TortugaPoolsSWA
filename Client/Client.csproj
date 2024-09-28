@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -12,8 +12,10 @@
     <None Remove="Components\Footer.razor.css" />
     <None Remove="Components\MainHomeAction.razor.css" />
     <None Remove="Components\ReviewScroll.razor.css" />
+    <None Remove="Pages\About.razor.css" />
     <None Remove="Pages\Contact.razor.css" />
     <None Remove="Pages\Home.razor.css" />
+    <None Remove="Pages\HomeContact.razor.css" />
     <None Remove="Pages\Reviews.razor.css" />
     <None Remove="Pages\Services.razor.css" />
   </ItemGroup>
@@ -23,8 +25,10 @@
     <Content Include="Components\Footer.razor.css" />
     <Content Include="Components\MainHomeAction.razor.css" />
     <Content Include="Components\ReviewScroll.razor.css" />
+    <Content Include="Pages\About.razor.css" />
     <Content Include="Pages\Contact.razor.css" />
     <Content Include="Pages\Home.razor.css" />
+    <Content Include="Pages\HomeContact.razor.css" />
     <Content Include="Pages\Reviews.razor.css" />
     <Content Include="Pages\Services.razor.css" />
   </ItemGroup>

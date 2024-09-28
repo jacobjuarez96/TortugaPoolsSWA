@@ -3,15 +3,16 @@
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 
-<div class="contact-page" id="contact-page-id" style="height:@(IsConnectPage ? "150vh" : "125vh")">
+<div class="contact-page" id="contact-page-id" style="height:@(IsConnectPage ? "130vh" : "125vh")">
     <div class="contact-page-bio-container" @ref="contactBio">
         <div class="contact-page-bio-header contact-spacer">
-            Reach Out to Us!
+            <h1>Reach Out to Us!</h1>
         </div>
         <div class="contact-page-bio-inner ">
             <div class="contact-page-bio-secondary-header contact-spacer">
-                Premium Pool Cleaning
-                In the NOLA Area
+                <h2> Premium Pool Cleaning
+                In the NOLA Area</h2>
+               
             </div>
             <div class="contact-page-bio-description contact-spacer">
                 Dive into excellence with Tortuga
@@ -51,15 +52,11 @@
         
     </div>
     <div class="svg-top">
-        <svg width="1362" height="247" viewBox="0 0 1362 247" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1088.61 20.4826C1162.23 -74.9835 1269.04 11.9048 1361.04 -105L-64.2122 -49.6767L-159.75 141.085C-140.045 179.235 -69.7758 253.654 53.6603 246.135C207.955 236.735 331.963 195.718 435.336 117.986C538.709 40.2537 1014.98 115.949 1088.61 20.4826Z" fill="url(#paint0_linear_321_348)" />
-            <defs>
-                <linearGradient id="paint0_linear_321_348" x1="-23.0001" y1="220" x2="1132" y2="25" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#75E2FA" stop-opacity="0.68" />
-                    <stop offset="1" stop-color="#BFEDF6" />
-                </linearGradient>
-            </defs>
+        <svg width="2460" height="191" viewBox="0 0 2460 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H2460C2460 27.8542 2362.33 32.386 2308.5 38.4653C2240 46.2008 2164.2 26.8925 2069 68.1432C1973.8 109.394 1560 99.9765 1368.5 107.437C1249.69 112.066 962 107.437 839 151.374C750.21 183.091 272.333 179.339 0 191V0Z" fill="#8CD8F0"/>
         </svg>
+
+
     </div>
 
     <div class="svg-bottom">
@@ -132,19 +129,17 @@
     </div>
 </div>
 
+<Footer/>
+
 @code {
     private ElementReference contactBio;
     private bool IsConnectPage { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && !IsConnectPage)
+        if (firstRender )
         {
             await JSRuntime.InvokeVoidAsync("observeElement", contactBio);
-        }
-        if (firstRender && IsConnectPage)
-        {
-            await JSRuntime.InvokeVoidAsync("addClass", contactBio, "is-visible-connect");
         }
     }
 

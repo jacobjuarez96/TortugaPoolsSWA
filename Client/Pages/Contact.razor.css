@@ -51,10 +51,10 @@
     padding: .6rem 0;
 }
 
-.contact-page-bio-header {
+.contact-page-bio-header h1 {
     color: #392f2f;
     font-size: clamp(2rem, 4cqw, 4.6cqw);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
     padding-left: 2cqw;
 }
@@ -65,7 +65,7 @@
     padding-left: 2cqw;
 }
 
-.contact-page-bio-secondary-header {
+.contact-page-bio-secondary-header h2 {
     font-weight: 600;
     color: #0e5f77;
     font-size: clamp(1.4rem, 2.5cqw, 3.1cqw);
@@ -186,6 +186,7 @@ a {
     .contact-page {
         flex-direction: column;
         height: fit-content !important;
+        padding-top: 10cqw;
     }
 
     .contact-page-bio-container {

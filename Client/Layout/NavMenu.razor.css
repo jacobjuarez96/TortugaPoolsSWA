@@ -67,7 +67,6 @@
 }
 
 .svg-class {
-    filter: drop-shadow(3px 3px 21px rgba(0, 0, 0, 1.0));
     width: 100%;
 }
 
@@ -131,8 +130,25 @@
     animation: 3s tilt-shaking infinite;
 }
 
+/*                  Scroll Up Sticky Menu Stuff         */
 
-/*////////////menu stuff//////////*/
+
+.scroll-down .navbar {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .navbar {
+    filter: drop-shadow(0 -10px 20px rgb(0, 0, 0));
+    background-color: #0f303a;
+    // overflow: hidden;
+}
+
+.scroll-up .top-left {
+    filter: none;
+}
+
+
+/*//////////// Hamburger menu stuff//////////*/
 .menu-but-class {
     appearance: none;
     background-color: transparent;
@@ -161,6 +177,8 @@
     transform-origin: center;
 }
 
+
+
 :root[menu-open] body {
     position: fixed;
 }
@@ -172,8 +190,9 @@
 
 
 :root[menu-open] #menu-container li,
-:root[menu-open] #menu-container svg {
-    opacity: 1;
+:root[menu-open] #menu-container svg,
+::deep.hamburger-a-wrapper a{
+    opacity: 1 !important;
     list-style: none;
 }
 
@@ -205,7 +224,6 @@
 
 #menu-container {
     overflow: hidden;
-    // z-index: 999;
     position: absolute;
     inset: 0;
     background-color: #0f303a;
@@ -217,7 +235,8 @@
     z-index: -1;
 }
 
-#menu-container li {
+#menu-container li,
+::deep.hamburger-a-wrapper a{
     color: white;
     opacity: 0;
     transition: opacity .2s ease-in-out;
@@ -227,15 +246,16 @@
     font-weight: 700;
 }
 
-#menu-container a {
+#menu-container a,
+::deep.hamburger-a-wrapper a{
     text-decoration: none;
     color: white;
     transition: color .2s ease-in-out;
 }
 
-#menu-container a:hover {
-    // color: #d3711e;
-    color: #021419;
+#menu-container a:hover,
+::deep .hamburger-a-wrapper:hover a{
+    color: #021419 !important;
 }
 
 .menu-wrapper {

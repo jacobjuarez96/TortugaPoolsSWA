@@ -120,15 +120,9 @@ window.observeElement = function (element) {
     else { console.error('Parameter is not a valid dom element') }
 };
 
-function addClass(element, className) {
-    if (element) {
-        element.classList.add(className);
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+////////////////////////////////////////////////////////////////////////////////////////////
+//              S C R O L L    T O    F O R M
+////////////////////////////////////////////////////////////////////////////////////////////
 function scrollToElement(id) {
     const element = document.getElementById(id);
     if (element) {
@@ -170,7 +164,7 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll <= 0) {
+    if (currentScroll <= 100) {
         body.classList.remove('scroll-up');
     }
 
@@ -193,6 +187,10 @@ const rootElement = document.documentElement;
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////
+//              H A M B U R G E R    M E N U     S T U F F 
+////////////////////////////////////////////////////////////////////////////////////////////
+
 window.toggleMenu = () => {
     const menuButton = document.querySelector('#menu-but-id');
     const rootElement = document.documentElement;
@@ -203,21 +201,20 @@ window.toggleMenu = () => {
     } else {
         rootElement.setAttribute('menu-open', '');
     }
-}
 
-window.toggleMenu2 = () => {
-    const menuButton = document.querySelector('#menu-but-id-sec');
-    const rootElement = document.documentElement;
+    const menuLinks = document.querySelectorAll('.unstyled a'); 
 
-    if (rootElement.hasAttribute('menu-open')) {
-        rootElement.removeAttribute('menu-open');
-    } else {
-        rootElement.setAttribute('menu-open', '');
-    }
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            rootElement.removeAttribute('menu-open');
+        });
+    });
 }
 
 
-//Lenis smooth scroll
+////////////////////////////////////////////////////////////////////////////////////////////
+//              L E N I S    S M O O T H    S C R O L L
+////////////////////////////////////////////////////////////////////////////////////////////
 const lenis = new Lenis()
 function raf(time) {
     lenis.raf(time)
