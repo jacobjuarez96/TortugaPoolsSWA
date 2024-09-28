@@ -29,10 +29,14 @@ namespace Api
             _logger.LogInformation("SendEmailFunction triggered.");
 
             // Read configuration values
-            var smtpServer = _configuration["SMTP_Server"];
-            var smtpPort = int.Parse(_configuration["SMTP_Port"]);
-            var smtpUser = _configuration["SMTP_User"];
-            var smtpPass = _configuration["SMTP_Pass"];
+            //var smtpServer = _configuration["SMTP_Server"];
+            //var smtpPort = int.Parse(_configuration["SMTP_Port"]);
+            //var smtpUser = _configuration["SMTP_User"];
+            //var smtpPass = _configuration["SMTP_Pass"];
+            var smtpServer = Environment.GetEnvironmentVariable("SMTP_Server");
+            var smtpPort = int.Parse(Environment.GetEnvironmentVariable("SMTP_Port"));
+            var smtpUser = Environment.GetEnvironmentVariable("SMTP_User");
+            var smtpPass = Environment.GetEnvironmentVariable("SMTP_Pass");
 
             // Deserialize the request body
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
