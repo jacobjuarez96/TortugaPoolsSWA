@@ -7,16 +7,16 @@ namespace BlazorApp.Shared.Models
         [Required]
         public string Name { get; set; }
 
-        //[Required]
-        //[EmailAddress(ErrorMessage = "Please enter a valid email address.")]
-        //public string Email { get; set; }
+        [Required]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+        public string Email { get; set; }
 
-        //public string Phone { get; set; }
+        public string Phone { get; set; }
 
-        //[Required]
-        //public string Subject { get; set; }
+        [Required]
+        public string Subject { get; set; }
 
-        //[Required]
-        //public string Message { get; set; }
+        [Required]
+        public string Message { get; set; }
     }
 }

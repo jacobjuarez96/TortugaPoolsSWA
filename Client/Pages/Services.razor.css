@@ -1,0 +1,344 @@
+﻿﻿.services-page-container {
+    width: 100%;
+    background-color: #fffff6;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 4rem;
+    height: fit-content;
+    container-type: inline-size;
+}
+
+.svg-top {
+    position: absolute;
+    top: -3px;
+    left: -1px;
+}
+
+.services-content {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    text-align: center;
+}
+
+.services-header {
+    padding-top: 3rem;
+    font-weight: 600;
+    color: white;
+    font-size: clamp(2.5rem, 4cqw, 5rem);
+}
+
+.services-container {
+    padding-top: 8rem;
+    margin: 0 auto;
+    width: 72%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-inner-container {
+    opacity: 0;
+}
+
+    .services-inner-container.is-visible {
+        animation: slideIn 1.5s ease forwards;
+        opacity: 1;
+    }
+
+.service-blocks {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+    .service-blocks.is-visible {
+        animation: slideIn 1.5s ease forwards;
+        opacity: 1;
+    }
+
+.service-display-container {
+    flex-direction: column;
+    display: flex;
+    height: 16rem;
+    width: 18rem;
+    position: relative;
+    width: 22.5cqw;
+    height: 20cqw;
+    container-type: inline-size;
+}
+
+.service-display-label {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transform: translateY(-1rem);
+    font-size: clamp(1.6rem, 10cqw, 50cqw);
+}
+
+.service-display-content-container {
+    width: 100%;
+    display: flex;
+    height: 80%;
+    border-radius: 6px;
+}
+
+.service-display-content {
+    background-color: #2b3033;
+    height: 60%;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    //background-color: #2b3033;
+    background-color: #0f303a;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(90deg, rgba(17,56,67,1) 0%, rgba(15,48,58,1) 100%);
+    // background: linear-gradient(90deg, rgba(15,48,58,1) 0%, rgba(17,59,71,1) 100%);
+    //background: linear-gradient(90deg, rgb(32 145 213) 41%, rgb(35 163 197) 100%);
+}
+
+    .swiper-slide img {
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+.swiper-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mySwiper .swiper-cube .swiper-cube-shadow {
+    opacity: .15 !important;
+}
+
+.swiper-cube .swiper-cube-shadow:before {
+    background: #c1c1c1 !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: justify;
+    padding: 10px 2rem;
+    position: relative;
+    font-weight: 900;
+    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 7cqw, 8cqw);
+}
+
+    li::before {
+        content: ""; /* Required for pseudo-element */
+        display: inline-block;
+        width: 13px; /* Match SVG width */
+        height: 17px; /* Match SVG height */
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='17' viewBox='0 0 13 17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.44676 16.0778C4.92883 16.0778 3.47306 15.4748 2.39972 14.4015C1.32638 13.3282 0.723389 11.8724 0.723389 10.3545C0.723389 6.53889 6.44676 0.100098 6.44676 0.100098C6.44676 0.100098 12.1701 6.53889 12.1701 10.3545C12.1701 11.8724 11.5671 13.3282 10.4938 14.4015C9.42045 15.4748 7.96469 16.0778 6.44676 16.0778Z' fill='%23FBE6E6'/%3E%3C/svg%3E");
+        background-size: contain; /* Scale SVG to fit */
+        position: absolute; /* Position SVG */
+        left: 0; /* Adjust as needed */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
+    }
+
+
+.svg-left {
+    position: absolute;
+    left: 0;
+}
+
+
+.svg-background {
+    transform: matrix(1, 0, 0, 1, -54, 13);
+    bottom: 0;
+    position: absolute;
+}
+
+.svg-background-2 {
+    z-index: 0;
+    top: 87px;
+    right: 0;
+    position: absolute;
+}
+
+.svg-foreground {
+    transform: matrix(1, 0, 0, 1, -171, 14);
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.svg-foreground-2 {
+    transform: matrix(1, 0, 0, 1, -130, 64);
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.swiper-pagination {
+    z-index: 1;
+}
+
+#right-arrow {
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    right: 7cqw;
+    bottom: 4cqw;
+}
+
+    #right-arrow:hover {
+        filter: contrast(.2);
+    }
+
+#cleaningSwiper .swiper-pagination-bullet {
+    width: 3px !important;
+    height: 3px !important;
+    background-color: red !important;
+}
+
+.swiper-pagination .swiper-pagination-bullets .swiper-pagination-horizontal span .swiper-pagination-bullet {
+    width: 1px !important;
+    height: 1px;
+    background-color: orange !important;
+}
+
+::deep span #cleaningSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: yellow;
+}
+
+::deep span #cleaningSwiper .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 4px));
+    height: 4px;
+}
+
+::deep .swiper-info span {
+    background-color: yellow !important;
+}
+
+#tiny-leaf {
+    animation: 40s ease-in-out infinite alternate pulse;
+    transform-origin: center;
+}
+
+#sway-leaf-1 {
+    animation: sway 4s infinite;
+    transform-origin: bottom;
+}
+
+#sway-leaf-2 {
+    animation: sway 7s infinite;
+    transform-origin: bottom;
+}
+
+#sway-leaf-3 {
+    animation: sway 5s infinite;
+    transform-origin: bottom;
+}
+
+#sway-leaf-4 {
+    animation: sway 8s infinite;
+    transform-origin: bottom;
+}
+
+#sway-leaf-5 {
+    animation: sway 2s alternate infinite;
+    transform-origin: bottom;
+}
+
+#top-leaf {
+    animation: sway 9s alternate infinite;
+    transform-origin: left;
+}
+
+#leaf-shadow {
+    animation: sway 6s alternate infinite;
+    transform-origin: left;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: skewX(-5deg);
+    }
+
+    50% {
+        transform: skewX(5deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1280px) {
+    .service-blocks {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        display: flex;
+    }
+
+    .services-page-container {
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+
+    .service-display-container {
+        height: 16rem;
+        width: 18rem;
+    }
+}
+
+@media(max-width: 839px) {
+    .svg-background-2 {
+        right: -100px;
+    }
+}
+
+@media(max-width: 500px) {
+    .svg-background-2 {
+        right: -160px;
+    }
+
+    .service-blocks {
+        margin-top: -4rem;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: rotateY(30deg) scale(1) translateX(10px) translateY(-50px);
+    }
+
+    50% {
+        transform: rotateY(-30deg) scale(1.2) translateX(40px) translateY(10px);
+    }
+}

@@ -8,6 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\ContactFormComponent.razor.css" />
+    <None Remove="Components\Footer.razor.css" />
+    <None Remove="Components\MainHomeAction.razor.css" />
+    <None Remove="Components\ReviewScroll.razor.css" />
+    <None Remove="Pages\Contact.razor.css" />
+    <None Remove="Pages\Home.razor.css" />
+    <None Remove="Pages\Reviews.razor.css" />
+    <None Remove="Pages\Services.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Components\ContactFormComponent.razor.css" />
+    <Content Include="Components\Footer.razor.css" />
+    <Content Include="Components\MainHomeAction.razor.css" />
+    <Content Include="Components\ReviewScroll.razor.css" />
+    <Content Include="Pages\Contact.razor.css" />
+    <Content Include="Pages\Home.razor.css" />
+    <Content Include="Pages\Reviews.razor.css" />
+    <Content Include="Pages\Services.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MailKit" Version="4.7.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
@@ -18,6 +40,11 @@
 
   <ItemGroup>
 	<ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@* <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">Static Web Apps</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -15,13 +15,8 @@
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            <NavLink class="nav-link" href="contact">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Contact
             </NavLink>
         </div>
     </nav>
@@ -37,3 +32,61 @@
         collapseNavMenu = !collapseNavMenu;
     }
 }
+ *@
+
+ <div class="navbar">
+    <div class="top-left">
+        <div class="svg-logo-container">
+            <div class="svg-a-container">
+                <NavLink class="top-nav-menu-logo" href="" Match="NavLinkMatch.All">
+                    <img class="svg-class" src="svgs/logosvg/Logo.svg" alt="Logo" />
+                </NavLink>
+            </div>
+            
+        </div>
+        <NavLink class="nav-menu-logo-font" href="" Match="NavLinkMatch.All">
+            <span class="name-top">TORTUGA</span> <br />
+            <span class="name-bottom">POOL SERVICES</span>
+        </NavLink>
+    </div>
+
+    <div class="nav-links-container">
+        <div class="nav-links">
+            <a class="nav-button" href="tel:2252028269" id="phone-ref">
+                <div id="give-us-a-call">
+                    Give Us a Call!
+                </div>
+                <br />
+                <div id="phone-svg">
+                    <img src="svgs/logosvg/Phone-svg.svg" />
+                </div>
+                <div id="phone-number">
+                    504.473.4384
+                </div>
+            </a>
+            <div class="right-links">
+                <div class="button-a-wrapper">
+                    <NavLink class="nav-button" href="contact">
+                        Contact
+                    </NavLink>
+                </div>
+                
+                <div class="button-a-wrapper">
+                    <NavLink class="nav-button" href="contact">
+                        About
+                    </NavLink>
+                </div>
+
+            </div>
+            <button class="menu-but-class" id="menu-but-id">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+ </div>

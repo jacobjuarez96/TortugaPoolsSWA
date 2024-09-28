@@ -1,0 +1,35 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div class="main-home-action-container" @ref="actionContainer">
+    <div class="main-home-action-prompt">
+        Schedule <br />Your Cleaning
+    </div>
+    <div class="main-home-action-bar-container">
+        <div class="main-home-action-bar">
+            <div class="action-bar-prompt">
+                Click Go to Schedule a Quote
+            </div>
+            <button @onclick="ScrollToForm" class="home-action-button">
+                Go
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private ElementReference actionContainer;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("observeElement", actionContainer);
+
+        }
+    }
+
+    private async Task ScrollToForm()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToElement", "contact-page-id");
+    }
+}

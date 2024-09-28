@@ -1,0 +1,234 @@
+﻿﻿.reviews-gallery-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    flex-direction: column;
+    margin-top: 8cqw;
+}
+
+.reviews-gallery-container.is-visible {
+    animation: slideIn 1.5s ease forwards;
+    opacity: 1;
+}
+
+.gallery-header {
+    font-weight: 600;
+    text-align: center;
+    color: #0C283D;
+    padding-bottom: 4rem;
+    font-size: clamp(1.7rem, 3cqw, 4cqw);
+    padding-right: 8cqw;
+    padding-left: 8cqw;
+}
+
+.swiper {
+    justify-content: center;
+    display: flex;
+    width: 25cqw;
+    height: fit-content;
+    border-radius: 3cqw;
+    position: unset;
+    min-width: 292px;
+}
+
+#reviews-swiper {
+    box-shadow: 0px 0px 52px 10px rgb(10 54 70 / 27%);
+    transition: box-shadow .3s ease-in-out;
+}
+
+    #reviews-swiper:hover {
+        box-shadow: 0px 0px 52px 2px rgb(10 54 70 / 42%);
+    }
+
+.swiper-slide .swiper-slide-active {
+    box-shadow: 0px 0px 52px 10px rgb(10 54 70 / 27%);
+}
+
+.review-container {
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    height: fit-content;
+    min-height: 38cqh;
+    box-shadow: 0px 4px 42px 10px rgba(17, 75, 96, 0.1);
+    border-radius: 3cqw;
+    justify-content: center;
+    container-type: inline-size;
+}
+
+
+.review-navigation {
+    top: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: 3cqh;
+    justify-content: space-between;
+    width: 35cqw;
+    min-width: 360px;
+    z-index: 1;
+}
+
+    .review-navigation svg {
+        transition: filter .2s ease;
+    }
+
+        .review-navigation svg:hover {
+            cursor: pointer;
+            color: green;
+            stroke: green;
+            filter: contrast(1.6);
+        }
+
+.review-main-content {
+    width: 100%;
+    height: 90%;
+    padding: 10cqw;
+    color: gray;
+}
+
+.review-top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-info-container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    pointer-events: none;
+}
+
+.reviewer-avatar {
+    color: white;
+    width: 15cqw;
+    height: 15cqw;
+    background-color: #91c9e0;
+    border-radius: 100%;
+    display: flex;
+    container-type: inline-size;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(14px, 7cqw, 9cqw);
+}
+
+.reviewer-details {
+    padding-left: 5cqw;
+    line-height: 6cqw;
+}
+
+.reviewer-name {
+    font-size: 6.2cqw;
+}
+
+.reviewer-num-reviews {
+    font-size: 3.9cqw;
+}
+
+.review-rating-container {
+    width: 17cqh;
+    margin-top: 3cqh;
+}
+
+.review-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.review-date {
+    padding-top: 2cqh;
+    font-size: 3.9cqw;
+    pointer-events: none;
+}
+
+.review-content {
+    padding-top: 2cqh;
+    pointer-events: none;
+}
+
+.review-title {
+    color: #353535;
+    font-size: 7cqw;
+    font-weight: 600;
+}
+
+.review {
+    height: 57cqw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+    .review p {
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        font-size: 6.2cqw;
+    }
+
+.review-link-container {
+    margin-top: 4cqh;
+    align-items: end;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+}
+
+    .review-link-container a {
+        text-decoration: none;
+    }
+
+.review-link {
+    color: #00946C;
+    cursor: pointer;
+    font-size: 5cqw;
+    transition: text-decoration 5s ease;
+}
+
+    .review-link:hover {
+        text-underline-offset: .7cqh;
+        text-decoration: underline;
+    }
+
+.google-svg-container {
+    width: 8cqw;
+    height: 8cqw;
+    margin-left: 3cqw;
+}
+
+.google-svg-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.google-svg {
+    height: 100%;
+    width: 100%;
+}
+
+@media(max-width: 390px) {
+    .review-navigation {
+        top: 56%;
+        justify-content: space-around;
+        width: 180cqw;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: .2;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
