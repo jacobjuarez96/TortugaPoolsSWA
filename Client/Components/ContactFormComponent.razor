@@ -88,7 +88,7 @@
             else
             {
                 // Handle failure, e.g., show an error message
-                await JSRuntime.InvokeVoidAsync("animateButtonFailure");
+                // await JSRuntime.InvokeVoidAsync("animateButtonFailure");
                 Console.WriteLine("Failed to send email.");
                 await Task.Delay(4000);
                 contactFormModel = new ContactFormModel();
