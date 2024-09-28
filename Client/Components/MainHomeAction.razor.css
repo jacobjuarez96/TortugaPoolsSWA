@@ -35,6 +35,10 @@
     font-size: clamp(3.2rem, 4cqw, 5cqw);
 }
 
+.main-home-action-prompt h1:focus-visible {
+    outline: none;
+}
+
 .main-home-action-prompt:focus-visible {
     outline: none;
 }
