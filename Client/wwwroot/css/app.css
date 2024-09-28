@@ -33,7 +33,7 @@ body {
 .loading-container svg path,
 .loading-container svg ellipse {
     stroke: var(--loader-text-color);
-    animation: 6s animate-stroke;
+    animation: 3s animate-stroke;
 }
 
 @keyframes animate-stroke {

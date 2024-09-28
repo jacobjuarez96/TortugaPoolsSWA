@@ -55,7 +55,7 @@ namespace Api
             // Create email message
             var emailMessage = new MimeMessage();
             emailMessage.From.Add(new MailboxAddress("Contact Form", smtpUser));
-            emailMessage.To.Add(new MailboxAddress("Recipient", smtpUser));
+            emailMessage.To.Add(new MailboxAddress("Recipient", "tortuganolapools@gmail.com"));
             emailMessage.Subject = "Contact Form Submission";
             emailMessage.Body = new TextPart("plain")
             {
