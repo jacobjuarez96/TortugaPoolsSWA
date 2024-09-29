@@ -72,6 +72,12 @@
     font-size: clamp(.7rem, 3.5cqw, 3.6cqw);
 }
 
+.action-bar-prompt p span, 
+#quote-text span{
+    color: #226393;
+    font-style: italic;
+}
+
 .home-action-button {
     height: 96%;
     font-size: 3cqh;

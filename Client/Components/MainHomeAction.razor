@@ -9,7 +9,9 @@
     <div class="main-home-action-bar-container">
         <div class="main-home-action-bar">
             <div class="action-bar-prompt">
-                Click Go to Schedule a Quote
+                <p @ref="replaceText" id="quote-text">
+                    Click <span> Go </span> to Schedule a Quote
+                </p>
             </div>
             <button @onclick="ScrollToForm" class="home-action-button">
                 Go
@@ -20,13 +22,14 @@
 
 @code {
     private ElementReference actionContainer;
+    private ElementReference replaceText;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await JSRuntime.InvokeVoidAsync("observeElement", actionContainer);
-
+            await JSRuntime.InvokeVoidAsync("updateText", replaceText);
         }
     }
 

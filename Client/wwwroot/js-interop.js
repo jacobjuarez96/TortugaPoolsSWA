@@ -130,6 +130,27 @@ function scrollToElement(id) {
     }
 }
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//              C H A N G E   P R O M P T    T E X T
+////////////////////////////////////////////////////////////////////////////////////////////
+
+function updateText(element) {
+    if (element) {
+        if (window.innerWidth < 500) {
+            element.innerHTML = 'Touch <span style="color: #226393; font-style: italic;"> Go </span> to Schedule a Quote';
+        } else {
+            element.innerHTML = 'Click <span style="color: #226393; font-style: italic;"> Go </span> to Schedule a Quote';
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//              F O R M    B U T T O N    A N I M A T I O N
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
 const submitButton = document.getElementById('form-button')
 const submitButtonText = document.querySelector('#form-button .button-text')
 const navLinks = document.querySelector('.nav-links-sec')
@@ -156,6 +177,12 @@ function animateButtonSuccess() {
         console.log("Button not found");
     }
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//              S T I C K Y    N A V B A R    A N D   H I D E
+////////////////////////////////////////////////////////////////////////////////////////////
 
 
 const body = document.body;
