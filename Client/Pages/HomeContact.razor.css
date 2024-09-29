@@ -59,11 +59,15 @@
     padding-left: 2cqw;
 }
 
-.contact-page-bio-inner {
-    width: 75%;
-    font-weight: 600;
-    padding-left: 2cqw;
+.contact-page-bio-header h1:focus-visible {
+    outline: none;
 }
+
+    .contact-page-bio-inner {
+        width: 75%;
+        font-weight: 600;
+        padding-left: 2cqw;
+    }
 
 .contact-page-bio-secondary-header h2 {
     font-weight: 600;
