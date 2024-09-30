@@ -81,16 +81,16 @@
 .home-action-button {
     height: 96%;
     font-size: 3cqh;
-    padding: 0cqw 7cqw;
+    padding: 0cqw 5.5cqw;
     display: flex;
     align-items: center;
     border: none;
     background-color: #226393;
-    border-radius: 22px;
+    border-radius: 5.5cqw;
     color: white;
     font-style: italic;
     font-weight: 600;
-    margin-right: 1cqw;
+    margin-right: 2cqw;
     transition: all .2s ease-in-out;
 }
 

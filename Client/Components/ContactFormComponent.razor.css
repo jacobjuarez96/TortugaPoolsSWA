@@ -39,11 +39,11 @@
 
 .label-class {
     position: absolute;
-    top: 7px;
+    top: 1.8cqw;
     left: 10px;
     font-size: 8px;
     font-weight: bold;
-    color: rgb(255 255 255);
+    color: rgb(8 49 43);
     opacity: 0;
     visibility: hidden;
     transition: 0.25s;
@@ -64,7 +64,7 @@
     min-height: 40px;
     height: 6.5cqh;
     width: 100%;
-    font-size: clamp(1rem, 1.3cqw, 1.4cqw);
+    font-size: clamp(1rem, 3.3cqw, 3.4cqw);
     padding: 1cqw 5cqw;
     background-color: #51e09e;
 }
