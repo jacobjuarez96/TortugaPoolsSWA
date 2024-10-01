@@ -84,6 +84,7 @@
             ButtonText = "Sent!";
             ButtonClass = "success";
             Console.WriteLine("Email sent successfully.");
+            StateHasChanged();
             await Task.Delay(4000);
             contactFormModel = new ContactFormModel();
             ButtonText = "Send";
