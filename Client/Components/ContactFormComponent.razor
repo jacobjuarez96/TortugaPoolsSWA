@@ -45,9 +45,9 @@
             @*  ////////////////////////////////////////////////////////////////////////////////////////////// *@
             @*  ////////////////////////////////////////////////////////////////////////////////////////////// *@
 
-            <button type="submit" id="form-button" class="button">
+            <button type="submit" id="form-button" class="button @ButtonClass">
                 <span class="button-text">
-                    Send
+                    @ButtonText
                 </span>
                 <div class="button-loader">
                     <div></div>
@@ -63,6 +63,8 @@
 @code {
     private ElementReference contactFormContainer;
     private ContactFormModel contactFormModel = new ContactFormModel();
+    private string ButtonText { get; set; } = "Send";
+    private string ButtonClass { get; set; } = "";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -74,25 +76,26 @@
 
     private async Task HandleValidSubmit()
     {
-            await JSRuntime.InvokeVoidAsync("animateButtonLoading");
-            // Send the form data to the Azure Function
-            var response = await Http.PostAsJsonAsync("/api/SendEmailFunction", contactFormModel);
-            if (response.IsSuccessStatusCode)
-            {
-                // Handle success, e.g., show a success message
-                await JSRuntime.InvokeVoidAsync("animateButtonSuccess");
-                Console.WriteLine("Email sent successfully.");
-                await Task.Delay(4000);
-                contactFormModel = new ContactFormModel();
-            }
-            else
-            {
-                // Handle failure, e.g., show an error message
-                // await JSRuntime.InvokeVoidAsync("animateButtonFailure");
-                Console.WriteLine("Failed to send email.");
-                await Task.Delay(4000);
-                contactFormModel = new ContactFormModel();
-            }
+        ButtonClass = "loading";
+        // Send the form data to the Azure Function
+        var response = await Http.PostAsJsonAsync("/api/SendEmailFunction", contactFormModel);
+        if (response.IsSuccessStatusCode)
+        {
+            ButtonText = "Sent!";
+            ButtonClass = "success";
+            Console.WriteLine("Email sent successfully.");
+            await Task.Delay(4000);
+            contactFormModel = new ContactFormModel();
+            ButtonText = "Send";
+        }
+        else
+        {
+            // Handle failure, e.g., show an error message
+            // await JSRuntime.InvokeVoidAsync("animateButtonFailure");
+            Console.WriteLine("Failed to send email.");
+            await Task.Delay(4000);
+            contactFormModel = new ContactFormModel();
+        }
 
     }
 }

@@ -156,29 +156,6 @@ const submitButtonText = document.querySelector('#form-button .button-text')
 const navLinks = document.querySelector('.nav-links-sec')
 const navButton = document.querySelector('nav-button-sec')
 
-function animateButtonLoading() {
-    const submitButton = document.getElementById('form-button')
-    if (submitButton) {
-        submitButton.classList.add('loading');
-    } else {
-        console.log("Button not found");
-    }
-}
-
-function animateButtonSuccess() {
-    const submitButton = document.getElementById('form-button')
-    const submitButtonText = document.querySelector('#form-button .button-text')
-
-    if (submitButton) {
-        submitButton.classList.remove('loading');
-        submitButton.classList.add('success');
-        submitButtonText.innerHTML = "Sent!";
-    } else {
-        console.log("Button not found");
-    }
-}
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 //              S T I C K Y    N A V B A R    A N D   H I D E
